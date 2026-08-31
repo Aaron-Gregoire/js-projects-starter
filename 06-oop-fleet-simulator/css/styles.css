@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #222;
+}
+
+h1 { text-align: center; }
+
+#add-vehicle-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#add-vehicle-form input, #add-vehicle-form select {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+}
+
+button:hover { background: #244f88; }
+
+.vehicle-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-type-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background: #edf2f7;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #444;
+}
+
+.vehicle-actions button {
+  background: #718096;
+  margin-left: 6px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main>
+    <h1>Create an Account</h1>
+
+    <form id="signup-form" novalidate>
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name">
+        <span class="error-message" id="name-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <span class="error-message" id="email-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <span class="error-message" id="password-error"></span>
+        <div id="password-strength"></div>
+      </div>
+
+      <div class="field">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password">
+        <span class="error-message" id="confirm-password-error"></span>
+      </div>
+
+      <button type="submit">Sign Up</button>
+      <p id="form-success" hidden>Account created! (not really, this is a practice form)</p>
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

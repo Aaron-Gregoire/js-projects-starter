@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main>
+    <h1>Gallery</h1>
+
+    <div id="thumbnail-grid">
+      <!-- TODO: swap these for your own images, or generate them in JS
+           from an array of image paths -->
+      <img src="https://picsum.photos/id/10/300/200" alt="Photo 1" class="thumb">
+      <img src="https://picsum.photos/id/20/300/200" alt="Photo 2" class="thumb">
+      <img src="https://picsum.photos/id/30/300/200" alt="Photo 3" class="thumb">
+      <img src="https://picsum.photos/id/40/300/200" alt="Photo 4" class="thumb">
+      <img src="https://picsum.photos/id/50/300/200" alt="Photo 5" class="thumb">
+    </div>
+  </main>
+
+  <!-- Lightbox overlay, hidden until an image is clicked -->
+  <div id="lightbox" hidden>
+    <button id="lightbox-close">&times;</button>
+    <button id="lightbox-prev">&#8592;</button>
+    <img id="lightbox-image" src="" alt="">
+    <button id="lightbox-next">&#8594;</button>
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Dashboard</h1>
+  </header>
+
+  <main class="dashboard-grid">
+
+    <!-- WIDGET 1: Weather -->
+    <section class="widget" id="widget-weather">
+      <h2>Weather</h2>
+      <form id="city-form">
+        <input type="text" id="city-input" placeholder="City">
+        <button type="submit">Go</button>
+      </form>
+      <div id="weather-result"></div>
+    </section>
+
+    <!-- WIDGET 2: To-Do List -->
+    <section class="widget" id="widget-todo">
+      <h2>Tasks</h2>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Add a task...">
+        <button type="submit">Add</button>
+      </form>
+      <ul id="task-list"></ul>
+    </section>
+
+    <!-- WIDGET 3: Ask Claude -->
+    <section class="widget" id="widget-chat">
+      <h2>Ask Claude</h2>
+      <div id="chat-window"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask something...">
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- WIDGET 4: Device Status -->
+    <section class="widget" id="widget-device">
+      <h2>Device Status</h2>
+      <p id="battery-status">Battery: —</p>
+      <p id="orientation-status">Orientation: —</p>
+    </section>
+
+  </main>
+
+  <!-- Each widget's logic lives in its own file so they can't
+       accidentally clobber each other's variables. -->
+  <script src="js/weather-widget.js"></script>
+  <script src="js/todo-widget.js"></script>
+  <script src="js/chat-widget.js"></script>
+  <script src="js/device-widget.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

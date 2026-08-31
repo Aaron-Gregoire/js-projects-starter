@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehicle Fleet Simulator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main>
+    <h1>Vehicle Fleet</h1>
+
+    <form id="add-vehicle-form">
+      <select id="vehicle-type">
+        <option value="car">Car</option>
+        <option value="truck">Truck</option>
+        <option value="motorcycle">Motorcycle</option>
+      </select>
+      <input type="text" id="vehicle-make" placeholder="Make" required>
+      <input type="text" id="vehicle-model" placeholder="Model" required>
+      <button type="submit">Add to Fleet</button>
+    </form>
+
+    <div id="fleet-list"></div>
+  </main>
+
+  <script src="js/vehicles.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
