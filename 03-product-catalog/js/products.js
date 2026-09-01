@@ -12,4 +12,5 @@ const products = [
   { id: 7, name: "Water Bottle", category: "Accessories", price: 15.0 },
   { id: 8, name: "Monitor Stand", category: "Electronics", price: 27.5 },
   // TODO: add a few more of your own
+  { id: 9, name: "Pencil", category: "Office", price: 2.0}
 ];
