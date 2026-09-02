@@ -14,7 +14,7 @@ const nextBtn = document.querySelector("#lightbox-next");
 
 // STEP 2: Build an array of the image sources so you can navigate by index.
 // Hint: grab all elements with class "thumb" and map them to their `src`.
-let imageSources = []; // TODO
+let imageSources = Array.from(document.querySelectorAll(".thumb")).map((thumb) => thumb.src); // TODO
 let currentIndex = 0;
 
 // STEP 3: Write openLightbox(index):
@@ -23,11 +23,15 @@ let currentIndex = 0;
 //   - remove the `hidden` attribute from #lightbox
 function openLightbox(index) {
   // TODO
+  currentIndex = index; 
+  lightboxImage.src = imageSources[currentIndex];
+  lightbox.removeAttribute("hidden");
 }
 
 // STEP 4: Write closeLightbox() — just re-add the `hidden` attribute
 function closeLightbox() {
   // TODO
+  lightbox.setAttribute("hidden", "true");
 }
 
 // STEP 5: Write showNext() and showPrev(). Be careful with the edges —
@@ -35,10 +39,14 @@ function closeLightbox() {
 // when you go past the first/last image.
 function showNext() {
   // TODO
+  currentIndex = (currentIndex + 1) % imageSources.length;
+  lightboxImage.src = imageSources[currentIndex];
 }
 
 function showPrev() {
   // TODO
+  currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+  lightboxImage.src = imageSources[currentIndex];
 }
 
 // STEP 6: Use event delegation — one click listener on thumbnailGrid.
